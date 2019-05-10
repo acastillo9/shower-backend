@@ -1,12 +1,12 @@
-package co.com.shower;
+package co.com.blocks;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ShowerApplication {
+public class BlocksApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ShowerApplication.class, args);
+		SpringApplication.run(BlocksApplication.class, args);
 	}
 }

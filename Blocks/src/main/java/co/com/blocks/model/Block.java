@@ -1,4 +1,4 @@
-package co.com.shower.model;
+package co.com.blocks.model;
 
 import java.util.Map;
 

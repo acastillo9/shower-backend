@@ -1,10 +1,10 @@
-package co.com.shower.repository;
+package co.com.blocks.repository;
 
 import java.util.List;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import co.com.shower.model.Block;
+import co.com.blocks.model.Block;
 
 public interface BlockRepository extends MongoRepository<Block, String> {
 

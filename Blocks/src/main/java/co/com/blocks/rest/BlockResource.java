@@ -1,4 +1,4 @@
-package co.com.shower.rest;
+package co.com.blocks.rest;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import co.com.shower.model.Block;
-import co.com.shower.service.BlockService;
+import co.com.blocks.model.Block;
+import co.com.blocks.service.BlockService;
 
 @RestController
 @RequestMapping(path = "/rest/block")
