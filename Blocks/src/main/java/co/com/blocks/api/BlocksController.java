@@ -1,4 +1,4 @@
-package co.com.blocks.rest;
+package co.com.blocks.api;
 
 import java.util.List;
 
@@ -10,24 +10,22 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import co.com.blocks.model.Block;
-import co.com.blocks.service.BlockService;
+import co.com.blocks.service.BlocksService;
 
 @RestController
-@RequestMapping(path = "/rest/block")
-public class BlockResource {
+@RequestMapping(path = "/api/blocks")
+public class BlocksController {
 
 	@Autowired
-	private BlockService blockService;
+	private BlocksService blocksService;
 
-	@CrossOrigin(origins = "*")
 	@RequestMapping(path = "", method = RequestMethod.GET)
-	public List<Block> get() {
-		return blockService.findAll();
+	public List<Block> findAll() {
+		return blocksService.findAll();
 	}
 
-	@CrossOrigin(origins = "*")
-	@RequestMapping(path = "/byname/{name}", method = RequestMethod.GET)
+	@RequestMapping(path = "/{name}", method = RequestMethod.GET)
 	public Block findByName(@PathVariable String name) {
-		return blockService.findByName(name);
+		return blocksService.findByName(name);
 	}
 }

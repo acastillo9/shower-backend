@@ -6,18 +6,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import co.com.blocks.model.Block;
-import co.com.blocks.repository.BlockRepository;
+import co.com.blocks.repository.BlocksRepository;
 
 @Service
-public class BlockService {
+public class BlocksService {
+
 	@Autowired
-	private BlockRepository blockRepository;
+	private BlocksRepository blocksRepository;
 
 	public Block findByName(String name) {
-		return this.blockRepository.findByName(name).get(0);
+		return this.blocksRepository.findByName(name).get(0);
 	}
 
 	public List<Block> findAll() {
-		return this.blockRepository.findAll();
+		return this.blocksRepository.findAll();
 	}
 }

@@ -5,8 +5,10 @@ import java.util.List;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import co.com.blocks.model.Block;
+import org.springframework.stereotype.Repository;
 
-public interface BlockRepository extends MongoRepository<Block, String> {
+@Repository
+public interface BlocksRepository extends MongoRepository<Block, String> {
 
 	public List<Block> findByName(String name);
 
